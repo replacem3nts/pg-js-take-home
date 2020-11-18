@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.main-site-div {
+  height: 100vh;
+  width: 100vw;
+  padding: 4rem;
+  font-size: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+.modal-child {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  height: 40%;
+  width: 50%;
+  background-color: salmon;
+  color: #fff;
+  padding: 4rem;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.modal-header {
+  font-size: 4.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.modal-text {
+  font-size: 2.25rem;
+  margin-bottom: 3.5rem;
+}
+
+.claim-now-btn {
+  border: none;
+  background-color: #fff;
+  color: salmon;
+  font-size: 2rem;
+  height: 4rem;
+  width: 20rem;
+}
