@@ -23,12 +23,14 @@ body {
   display: none;
 }
 
+/* MODAL STYLING ELEMENTS BELOW */
 .modal {
   position: absolute;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
+  background-color: #00000083;
   z-index: 1;
 }
 
@@ -41,6 +43,15 @@ body {
   background-color: salmon;
   color: #fff;
   padding: 4rem;
+
+  animation: childUpFromBottom 1s ease-out 0.5s;
+}
+
+.exit-modal-btn {
+  border: none;
+  background: none;
+  font-size: 2.5rem;
+  color: #ffffff87;
 }
 
 .modal-content {
@@ -64,4 +75,65 @@ body {
   font-size: 2rem;
   height: 4rem;
   width: 20rem;
+}
+
+/* MODAL ANIMATIONS AND ANIMATION CLASSES BELOW */
+.fade-in {
+  animation: fadeOpacityIn 1s ease-out;
+}
+
+.fade-out {
+  animation: fadeOpacityOut 1s ease-out;
+}
+
+@keyframes fadeOpacityIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOpacityOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.child-in {
+  animation: childUpFromBottom 1s ease-out;
+}
+
+.child-out {
+  animation: childDownToBottom 1s ease-out;
+}
+
+@keyframes childUpFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(150%);
+  }
+
+  1000% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes childDownToBottom {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(150%);
+  }
 }
